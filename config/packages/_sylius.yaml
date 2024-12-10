@@ -279,3 +279,6 @@ sylius_twig_hooks:
         'sylius_shop.base#javascripts':
             app_javascripts:
                 template: 'shop/javascripts.html.twig'
+        'sylius_shop.product.show.content.info.summary.add_to_cart':
+            quantity:
+                template: 'shop/product_quantity.html.twig'
