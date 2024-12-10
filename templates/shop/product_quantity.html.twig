@@ -16,10 +16,18 @@
     </div>
 </div>
 
- <script>
-    function productQuantityChange(quantity) {
-        if (parseInt(quantity, 10) >= 70) {
+<script>
+    const element = document.getElementById('sylius_shop_add_to_cart_cartItem_quantity');
+
+    function productQuantityChange(value) {
+        let quantity = Math.round(parseInt(value, 10) / 10) * 10;
+        if (value < 10) {
+            quantity = 10;
+        }
+        element.value = quantity;
+
+        if (quantity === 70) {
             alert('Great Choice');
         }
     }
- </script>
+</script>
