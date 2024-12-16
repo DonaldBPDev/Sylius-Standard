@@ -27,4 +27,8 @@ services:
     # as action arguments even if you don't extend any base controller class
     App\Controller\:
         resource: '../src/Controller'
-        tags: ['controller.service_arguments']
+        tags: [ 'controller.service_arguments' ]
+
+    App\Form\Extension\AddToCartFormExtension:
+        tags:
+            - { name: form.type_extension, extended_type: Sylius\Bundle\OrderBundle\Form\Type\CartItemType }
